@@ -16,3 +16,8 @@ use ./part_2/3_benchmarks/3_example_memory_bench
 use ./part_2/3_benchmarks/ex3_word_index
 use ./part_2/4_profiling/1_examples
 use ./part_2/4_profiling/ex1
+use ./part_3/1_gorutines/ex1_parallel_counter
+use ./part_3/1_gorutines/ex2_channels
+use ./part_3/1_gorutines/ex3_channels_generator
+use ./part_3/1_gorutines/ex4_channels_generator
+use ./part_3/1_gorutines/ex5_channels_generator
