@@ -1,0 +1,6 @@
+GOGC=off
+go test -bench="." -memprofile="mem.prof"
+go test -bench="." -cpuprofile="cpu.prof"
+go tool pprof cpu.prof
+go tool pprof mem.prof
+top10 -cum
