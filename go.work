@@ -30,3 +30,13 @@ use ./part_3/4_composition/example_1_channel_of_cancel
 use ./part_3/4_composition/ex1_channel_of_cancel
 use ./part_3/4_composition/ex2_merge_channels
 use ./part_3/4_composition/ex3_pipeline
+use ./part_3/5_time/timeout_example
+use ./part_3/5_time/ex1_queue_with_block
+use ./part_3/5_time/ex2_after_custom_realization
+use ./part_3/5_time/ex3_delay
+use ./part_3/5_time/ex4_schedule_ticker
+use ./part_3/5_time/ex5_rate_limiter
+use ./part_3/6_context/example_cancel_func_by_timeout_with_channels
+use ./part_3/6_context/example_cancel_func_by_timeout_with_context
+use ./part_3/6_context/ex1_generate_with_context
+use ./part_3/6_context/example_context_WithTimeout
