@@ -30,9 +30,14 @@ func execute(ctx context.Context, cancel context.CancelFunc, fn func() int, time
 func main() {
     // работает в течение 100 мс
     work := func() int {
-		time.Sleep(3 * time.Second)
+		time.Sleep(2 * time.Second)
 		fmt.Println("work done")
         return 42
+    }
+    work2 := func() int {
+		time.Sleep(3 * time.Second)
+		fmt.Println("work2 done")
+        return 43
     }
 
     // ждет 50 мс, после этого
@@ -41,6 +46,8 @@ func main() {
     ctx := context.Background()              // (1)
     ctx, cancel := context.WithCancel(ctx)   // (2)
 	defer cancel()
-    res, err := execute(ctx, cancel, work, 4)           // (5)
+    res, err := execute(ctx, cancel, work, 1)           // (5)
+    fmt.Println(res, err)
+    res, err = execute(ctx, cancel, work2, 2) 
     fmt.Println(res, err)
 }
