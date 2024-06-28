@@ -1,0 +1,1 @@
+module ex1_strings_safe_header
