@@ -1,4 +1,4 @@
-package quote
+package examples_test
 
 import (
 	"fmt"

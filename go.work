@@ -14,6 +14,7 @@ use ./part_2_clean_code/3_benchmarks/2_example_set
 use ./part_2_clean_code/3_benchmarks/ex1_fast_set_on_map
 use ./part_2_clean_code/3_benchmarks/3_example_memory_bench
 use ./part_2_clean_code/3_benchmarks/ex3_word_index
+use ./part_2_clean_code/3_benchmarks/4_what_is_faster_append_or_by_index
 use ./part_2_clean_code/4_profiling/1_examples
 use ./part_2_clean_code/4_profiling/ex1
 use ./part_3_multitask/1_gorutines/ex1_parallel_counter
@@ -48,3 +49,5 @@ use ./part_3_multitask/7_race_conditions/ex2_save_counter_with_rw_mutex
 use ./part_3_multitask/7_race_conditions/ex3_atomic_ints_without_mutex
 use ./part_4_stdlib/2_text/ex1_strings_safe_header
 use ./part_4_stdlib/2_text/examples
+use ./part_4_stdlib/2_text/ex2_calc_distance
+use ./part_4_stdlib/2_text/ex3_prettify_with_string_builder
