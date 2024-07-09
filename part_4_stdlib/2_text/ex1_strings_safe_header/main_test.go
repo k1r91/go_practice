@@ -1,9 +1,9 @@
 package main
 
 import (
-	"testing"
-	"strings"
 	"fmt"
+	"strings"
+	"testing"
 )
 
 // начало решения
@@ -38,16 +38,52 @@ import (
 	}
 	return strings.Trim(strings.Join(result, "-"), "-")
 }*/
-func slugify(src string) string {
+/*func slugify(src string) string {
     src = strings.ToLower(src)
     words := strings.FieldsFunc(src, func(r rune) bool {
         return (r < 'a' || r > 'z') && (r < 'A' || r > 'Z') && (r < '0' || r > '9') && r != '-'
     })
     return strings.Join(words, "-")
+}*/
+
+func slugify(src string) string {
+    src = strings.ToLower(src)
+	length := len(src)
+	var b strings.Builder
+	var wordLen int
+	b.Grow(length)
+	//bsrc := []byte(src)
+	//fmt.Println(src, length)
+	isSafe := func(c byte) bool {
+		if (c >= 97 && c <= 122) || c == 45 || (c >= 48 && c <= 57) {
+			return true
+		}
+		return false
+	}
+	for i := 0; i < length; {
+		j := i
+		//fmt.Printf("another word, i=%d\n", i)
+		wordLen = 0
+		for j < length && isSafe(src[j]) {
+			b.WriteByte(src[j])
+			wordLen ++
+			j += 1
+		}
+		if j < length - 1 && wordLen > 0 {
+			b.WriteByte(45)
+		}
+		i = j + 1
+	}
+	if wordLen == 0 {
+    	return strings.Trim(b.String(), "-")
+	} else {
+		return b.String()
+	}
 }
 
 // конец решения
 func Test(t *testing.T) {
+	fmt.Println([]byte("'"))
 	fmt.Println([]rune{'a', 'z', '0', '9', ' ', '-', '\'', '_', '\\', '/', '.'})
 	const phrase = "Debugging Go code (a status report)"
 	const want = "debugging-go-code-a-status-report"
@@ -65,6 +101,7 @@ func Test2(t *testing.T) {
 		t.Errorf("%s: got %#v, want %#v", phrase, got, want)
 	}
 }
+
 
 func Test3(t *testing.T) {
 	const phrase = "Go's New Brand"
@@ -97,6 +134,15 @@ func Test5(t *testing.T) {
 func Test6(t *testing.T) {
 	const phrase = "Hello, 中国!"
 	const want = "hello"
+	got := slugify(phrase)
+	if got != want {
+		t.Errorf("%s: got %#v, want %#v", phrase, got, want)
+	}
+}
+
+func Test7(t *testing.T) {
+	const phrase = "Tz6t5bx S9zne Fw-6i Giv0f F894; Tp-"
+	const want = "tz6t5bx-s9zne-fw-6i-giv0f-f894-tp-"
 	got := slugify(phrase)
 	if got != want {
 		t.Errorf("%s: got %#v, want %#v", phrase, got, want)

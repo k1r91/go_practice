@@ -51,3 +51,7 @@ use ./part_4_stdlib/2_text/ex1_strings_safe_header
 use ./part_4_stdlib/2_text/examples
 use ./part_4_stdlib/2_text/ex2_calc_distance
 use ./part_4_stdlib/2_text/ex3_prettify_with_string_builder
+use ./part_4_stdlib/2_text/ex4_regex
+use ./part_4_stdlib/2_text/ex5_templates
+use ./part_4_stdlib/3_datetime/ex1_is_leap_year
+use ./part_4_stdlib/3_datetime/ex2_timeofday
