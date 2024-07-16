@@ -55,3 +55,11 @@ use ./part_4_stdlib/2_text/ex4_regex
 use ./part_4_stdlib/2_text/ex5_templates
 use ./part_4_stdlib/3_datetime/ex1_is_leap_year
 use ./part_4_stdlib/3_datetime/ex2_timeofday
+use ./part_4_stdlib/3_datetime/ex3_parse_page_with_dates
+use ./part_4_stdlib/3_datetime/ex4_as_legacy_date
+use ./part_4_stdlib/4_input_output/ex1_readlines
+use ./part_4_stdlib/4_input_output/ex3_title_case
+use ./part_4_stdlib/4_input_output/ex4_random_reader
+use ./part_4_stdlib/4_input_output/ex5_abysswriter
+use ./part_4_stdlib/4_input_output/ex6_filter_tokens
+use ./part_4_stdlib/4_input_output/ex7_reptiloids
