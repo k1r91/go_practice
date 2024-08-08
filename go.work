@@ -74,4 +74,9 @@ use ./part_4_stdlib/6_http/ex3_fake_server
 use ./part_4_stdlib/7_sql/ex1_map_in_db
 use ./part_4_stdlib/7_sql/ex2_map_in_db_with_stmt
 use ./part_4_stdlib/7_sql/ex3_map_in_db_with_stmt_and_timeouts
+use ./part_1_base_constructions/8_generics/ex1_produce
 use ./part_1_base_constructions/9_everything/ex1_battle
+use ./part_1_base_constructions/8_generics/ex2_zipmap
+use ./part_1_base_constructions/8_generics/ex3_add
+use ./part_1_base_constructions/8_generics/ex4_generic_map
+use ./part_5_tests/smb
